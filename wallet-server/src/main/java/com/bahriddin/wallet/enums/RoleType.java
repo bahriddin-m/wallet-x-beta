@@ -1,4 +1,4 @@
-package com.bahriddin.wallet.enums.role;
+package com.bahriddin.wallet.enums;
 
 public enum RoleType {
     ADMIN,
