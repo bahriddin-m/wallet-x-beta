@@ -1,8 +1,8 @@
 package com.bahriddin.wallet.service.functionality;
 
-import com.bahriddin.wallet.payload.dao.SuperResponse;
+import com.bahriddin.wallet.payload.response.ApiResponse;
 
 
-public interface Delete<I> {
-    SuperResponse<?> delete(I id);
+public interface Delete<D> {
+    ApiResponse<?> delete(D id);
 }

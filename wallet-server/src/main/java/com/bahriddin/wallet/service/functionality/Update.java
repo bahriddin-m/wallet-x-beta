@@ -1,7 +1,7 @@
 package com.bahriddin.wallet.service.functionality;
 
-import com.bahriddin.wallet.payload.dao.SuperResponse;
+import com.bahriddin.wallet.payload.response.ApiResponse;
 
-public interface Update<D, I> {
-    SuperResponse<?> update(D dto, I id);
+public interface Update<U, I> {
+    ApiResponse<?> update(U dto, I id);
 }

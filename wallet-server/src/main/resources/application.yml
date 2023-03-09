@@ -1,18 +1,36 @@
-
+server:
+  port: 8080
+  error:
+    include-binding-errors: always
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
+    url: 'jdbc:postgresql://localhost:5432/postgres'
     username: postgres
     password: ninja
     driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always
   jpa:
     hibernate:
       ddl-auto: create-drop
     show-sql: true
+    enable_lazy_load_no_trans: true
     properties:
       hibernate:
         format_sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-server:
-  port: 8083
+    banner:
+      location: banner.txt
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 700086744673-keplb3hc6ere9uiqddg4aleho4i08g37.apps.googleusercontent.com
+            clientSecret: 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
+jwt:
+  token:
+    ttl: 604800000
+  secretKey: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970

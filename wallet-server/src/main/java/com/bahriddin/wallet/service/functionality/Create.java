@@ -1,7 +1,7 @@
 package com.bahriddin.wallet.service.functionality;
 
-import com.bahriddin.wallet.payload.dao.SuperResponse;
+import com.bahriddin.wallet.payload.response.ApiResponse;
 
-public interface Create<D> {
-    SuperResponse<?> create(D dto);
+public interface Create<C> {
+    ApiResponse<?> create(C dto);
 }
